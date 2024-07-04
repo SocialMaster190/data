@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controlled Text Lines</title>
+    <script>
+        // Function to remove a line completely
+        function removeLine(lineId, delay) {
+            setTimeout(function() {
+                var line = document.getElementById(lineId);
+                if (line) {
+                    line.parentNode.removeChild(line); // Remove the line completely
+                }
+            }, delay);
+        }
+    </script>
+</head>
+<body>
+    <div id="lines-container">
+        <!-- Example lines with IDs for controlling -->
+        <div id="line1">
+            Line 1: This is the first line.
+        </div>
+        <div id="line2">
+            Line 2: This is the second line.
+        </div>
+        <!-- Add more lines as needed -->
+    </div>
+
+    <script>
+        // Call removeLine function with line ID and delay in milliseconds
+        removeLine("line1", 5000); // Remove line1 after 5 seconds (5000 milliseconds)
+        removeLine("line2", 10000); // Remove line2 after 10 seconds (10000 milliseconds)
+        // Add more removeLine calls for additional lines
+    </script>
+</body>
+</html>
